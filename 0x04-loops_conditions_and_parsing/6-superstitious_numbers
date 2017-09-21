@@ -1,1 +1,21 @@
 #!/usr/bin/env bash
+#displays numbers 1-20
+a=1
+while [ "$a " -le 20 ]; do
+    case "$a" in
+	4)
+	    echo "bad luck from China"
+	    let a=a+1
+	    ;;
+	9)
+	    echo "bad luck from Japan"
+            let a=a+1
+            ;;
+	17)
+	    echo "bad luck from Italy"
+            let a=a+1
+            ;;
+	esac
+	echo "$a"
+	let a=a+1
+done
