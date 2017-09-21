@@ -1,1 +1,11 @@
 #!/usr/bin/env bash
+((LIMIT = 10))
+((a = 0))
+while ((a <= LIMIT))
+do
+    echo "Holberton School"
+    ((a += 1))
+done
+
+echo
+exit 0
