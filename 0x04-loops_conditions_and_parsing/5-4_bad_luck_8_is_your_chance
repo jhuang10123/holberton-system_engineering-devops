@@ -1,1 +1,14 @@
+
 #!/usr/bin/env bash
+#displays Holberton School 10 times
+a=1
+while [ "$a " -le 10 ]; do
+    if [ "$a" -eq 4 ]; then
+	echo "bad luck"
+    elif [ "$a" -eq 8 ]; then
+	echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    let a=a+1
+done
