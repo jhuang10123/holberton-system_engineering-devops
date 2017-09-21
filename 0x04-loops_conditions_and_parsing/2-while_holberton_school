@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-((a = 0))
-while ((a < 10))
-do
+#displays Holberton School 10 times
+a=0
+while [ "$a " -lt 10 ]; do
     echo "Holberton School"
-    ((a += 1))
+    let a=a+1
 done
-
-echo
-exit 0
