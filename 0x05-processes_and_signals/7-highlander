@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # displays To infinity and beyond indefinitely
-#+ every 2 seconds
+#+ every 2 seconds and prints "I am invincible!!!"
+#+ upon receiving SIGTERM
 
-command=(echo "I am invincible!!!")
-
-trap $command SIGTERM
+trap "echo 'I am invincible!!!'" SIGTERM
 
 while true
 do
