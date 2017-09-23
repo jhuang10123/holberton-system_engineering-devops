@@ -1,1 +1,5 @@
 #!/usr/bin/env bash
+# kills 4-to_infinity_and_beyond
+
+FILE=(pgrep -f "4-to_infinity_and_beyond")
+kill $FILE
