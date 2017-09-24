@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# creates file and terminate when received signals
+
+touch /var/run/holbertonscript.pid
+
+trap "echo I hate the kill command" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+trap "rm /var/run/holbertonscript.pid; kill -9 $$" SIGTERM SIGQUIT
+
+echo $$ > /var/run/holbertonscript.pid
+while true; do
+      echo "To infinity and beyond"
+done
