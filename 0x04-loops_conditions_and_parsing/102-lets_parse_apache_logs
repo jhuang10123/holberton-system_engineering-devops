@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# displays the visitor & HTTP status code from the Apache log file
