@@ -5,3 +5,4 @@ sudo apt-get -y install nginx
 
 
 #WANT: add a webpage(.html) with string "Holberton School"
+# echo "Holberton School" > .html file
