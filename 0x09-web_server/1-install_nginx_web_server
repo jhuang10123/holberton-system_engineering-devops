@@ -2,7 +2,9 @@
 # configures a new Ubuntu machine with respect to requirements
 sudo apt-get update
 sudo apt-get -y install nginx
-
+echo "Holberton School" > index.html
+mv index.html /usr/share/nginx/html/index.html
+service nginx restart
 
 #WANT: add a webpage(.html) with string "Holberton School"
 # echo "Holberton School" > .html file
