@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# configures a new Ubuntu machine with respect to requirements
+sudo apt-get update
+sudo apt-get -y install nginx
+sed -i ";" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+
+# add msg to html dir
+# 
