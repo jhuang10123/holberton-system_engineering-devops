@@ -3,5 +3,6 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
-sed -i ";" /etc/nginx/sites-enabled/default
+sed -i ';' /etc/nginx/sites-enabled/default
 sudo service nginx restart
+

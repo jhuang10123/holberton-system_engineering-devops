@@ -2,7 +2,5 @@
 # configures a new Ubuntu machine with respect to requirements
 sudo apt-get update
 sudo apt-get -y install nginx
-sed -i "rewrite ^/redirect_me http://www.google.com permanent;" 
+sed -i '26 -i rewrite ^/redirect_me http://www.google.com permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
-
-# need orig location
