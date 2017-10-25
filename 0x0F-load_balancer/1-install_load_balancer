@@ -6,5 +6,5 @@ sudo apt-get update
 sudo apt-get -y install haproxy
 echo ENABLED=1 | sudo tee /etc/default/haproxy
 cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
-sudo sed -i '39 i listen appname 0.0.0.0:80 \n\tmode http \n\tstats enable \n\tstats uri /haproxy?stats \n\tbalance roundrobin \n\toption httpclose \n\toption forwardfor \n\tserver 133-web-01 142.44.167.241:80 check \n\tserver 133-web-02 144.217.246.212:80 check' /etc/haproxy/haproxy.cfg
+sudo sed -i '39 i listen appname \n\tbind 0.0.0.0:80 \n\tmode http \n\tstats enable \n\tstats uri /haproxy?stats \n\tbalance roundrobin \n\toption httpclose \n\toption forwardfor \n\tserver 133-web-01 142.44.167.241:80 check \n\tserver 133-web-02 144.217.246.212:80 check' /etc/haproxy/haproxy.cfg
 sudo service haproxy start
