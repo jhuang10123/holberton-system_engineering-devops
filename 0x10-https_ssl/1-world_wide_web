@@ -17,7 +17,5 @@ if [ -z "$2" ]; then
 	get_domain "$1" "$sub"
     done
 else
-    print_domains "$1" "$2"
+    get_domain "$1" "$2"
 fi
-
-# get_domain "jhuang.website" "www"
