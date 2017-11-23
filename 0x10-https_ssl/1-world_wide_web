@@ -3,9 +3,9 @@
 get_domain() {
 
 
-    record=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print$4}')
-    ip=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print $5}')
-    printf "The subdomain %s is a %s record and points to %s\n", "$2" "$record" "$ip" 
+    record=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{printf "%s", $4}')
+    ip=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{printf "%s", $5}')
+    printf "The subdomain %s is a %s record and points to %s\n" "$2" "$record" "$ip" 
 
 }
 
