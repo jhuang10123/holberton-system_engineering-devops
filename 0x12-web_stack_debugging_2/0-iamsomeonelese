@@ -1,0 +1,9 @@
+#!/user/bin/env	bash
+# runs the whoami command under the user pased as an argument
+if [ -z "$1" ]
+then
+   whoami
+else
+    su - "$1" -c "whoami"
+fi
+
