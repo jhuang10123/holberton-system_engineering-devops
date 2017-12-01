@@ -7,5 +7,3 @@ sed -i 's/listen 80 default_server;/listen 8080 default_server/g' /etc/nginx/sit
 chown nginx:nginx /etc/nginx -R
 chmod 700 /etc/nginx/nginx.conf
 sudo -u nginx service nginx start
-
-
