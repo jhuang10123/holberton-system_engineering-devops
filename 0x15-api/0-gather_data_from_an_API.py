@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-
+Retrieves employee data by employee ID and
+returns information about employee  TODO list progress
 """
 
 
@@ -9,16 +10,13 @@ if __name__ == '__main__':
     from sys import argv
     user_payload = {'id': argv[1]}
     todo_payload = {'userId': argv[1]}
-    todo_url = 'https://jsonplaceholder.typicode.com/todos/'
-    user_url = 'https://jsonplaceholder.typicode.com/users/'
+    todo_url = 'https://jsonplaceholder.typicode.com/todos'
+    user_url = 'https://jsonplaceholder.typicode.com/users'
 
-#getting employee info
+#getting employee data
     user_req = requests.get(user_url, params=user_payload)
     user_json = user_req.json()
-#    print("json_response type is:{}".format(type(json_response)))
     for item in user_json:
- #       print(json_response)
- #       print()
         name = item['name']
 
 #getting employee todo
@@ -28,7 +26,6 @@ if __name__ == '__main__':
     todo_req = requests.get(todo_url, params=todo_payload)
     todo_json = todo_req.json()
     for item in todo_json:
-#        print(type(item.get('completed')))
         total += 1
         if item.get('completed'):
             completed += 1
