@@ -28,6 +28,6 @@ if __name__ == '__main__':
     for item in todo_json:
         status = item.get('completed')
         title = item.get('title')
-        with open(csvfile, "a+") as output:
+        with open(csvfile, "w") as output:
             output.write('"{}","{}","{}","{}"\n'.format
                          (user_id, username, status, title))
