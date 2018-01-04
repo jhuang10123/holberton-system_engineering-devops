@@ -13,13 +13,13 @@ if __name__ == '__main__':
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
     user_url = 'https://jsonplaceholder.typicode.com/users'
 
-#getting employee data
+# getting employee data
     user_req = requests.get(user_url, params=user_payload)
     user_json = user_req.json()
     for item in user_json:
         name = item['name']
 
-#getting employee todo
+# getting employee todo
     completed = 0
     completed_tasks = []
     total = 0

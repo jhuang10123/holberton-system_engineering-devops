@@ -2,8 +2,8 @@
 """
 Export all tasks by all employees in JSON format
 """
-import requests
 import json
+import requests
 
 
 def get_dict(username, task, status):
@@ -15,8 +15,6 @@ def get_dict(username, task, status):
 
 
 if __name__ == '__main__':
-    import requests
-    import json
 
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
     todo_all = requests.get(todo_url)
