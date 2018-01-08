@@ -4,7 +4,6 @@ queries the Reddit API and returns the top 10
 posts for a given subreddit
 """
 import requests
-from pprint import pprint
 
 
 def top_ten(subreddit):
