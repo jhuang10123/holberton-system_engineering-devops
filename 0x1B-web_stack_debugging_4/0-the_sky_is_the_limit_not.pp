@@ -1,6 +1,5 @@
 exec { 'change-max-open-files':
-  cwd     => '/etc/default/',
-  command => 'sudo sed -i "s/15/5000/" nginx',
+  command => 'sudo sed -i "s/15/5000/" /etc/default/nginx',
   path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
 }
 
