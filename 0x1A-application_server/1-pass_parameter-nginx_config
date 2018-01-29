@@ -1,5 +1,6 @@
         location /airbnb-dynamic/(\d+)$ {
                  include proxy_params;
+		 rewrite ^(/airbnb-dynamic.*) /$1 break;
                  proxy_pass http://127.0.0.1:8002/number_odd_or_even/$1;
 
         }
