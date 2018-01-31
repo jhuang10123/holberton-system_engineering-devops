@@ -65,4 +65,11 @@ server {
                  include proxy_params;
                  proxy_pass http://127.0.0.1:8003;
         }
+
+
+        location /static {
+                  root /home/ubuntu/AirBnB_clone_v4/web_dynamic;
+                  }
+
+
 }
